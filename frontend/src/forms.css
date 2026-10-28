@@ -1,0 +1,70 @@
+.standard-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  width: min(92%, 640px);
+  margin: 32px auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.standard-form label {
+  align-self: stretch;
+  margin: 0;
+  text-align: left;
+}
+
+.standard-form input:not([type="submit"]),
+.standard-form select,
+.standard-form textarea {
+  width: 100%;
+  min-height: 46px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.standard-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.standard-form input[type="submit"] {
+  width: 100%;
+  min-height: 48px;
+  margin: 4px 0 0;
+}
+
+.standard-form h2 {
+  margin: 8px 0 0;
+}
+
+.standard-form .product-card {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.standard-form .image-preview {
+  width: min(100%, 280px);
+  height: 180px;
+  margin: 0 auto;
+}
+
+.standard-form .success-msg {
+  min-height: 20px;
+  margin: 0;
+}
+
+.standard-form footer {
+  width: 100%;
+  margin-top: 4px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .standard-form {
+    width: min(92%, 640px);
+    margin: 24px auto;
+    padding: 18px;
+  }
+}

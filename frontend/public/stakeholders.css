@@ -1,0 +1,169 @@
+body {
+    margin: 20px;
+    min-height: 100vh;
+    background-color: #212529;
+    color: white;
+    font-family: Consolas, sans-serif;
+}
+
+.back-btn,
+.sign-out {
+    display: inline-block;
+    margin: 20px 10px 10px 20px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.back-btn { background-color: #0d3b8e; }
+.sign-out { background-color: #343a40; }
+
+.page-shell {
+    width: 90%;
+    max-width: 760px;
+    margin: 24px auto 50px;
+}
+
+h1 {
+    color: #00e676;
+    font-family: "Press Start 2P", Consolas, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 { margin-top: 30px; color: #00e676;text-align: center;}
+p { line-height: 1.5; }
+a { color: #7fd3dd; }
+
+.simple-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: min(92%, 520px);
+    margin: 24px auto;
+    padding: 20px;
+    background-color: #181818;
+    border: 1px solid #343a40;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.simple-form label { display: block; margin: 0; text-align: left; }
+.simple-form input,
+.simple-form select {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background-color: #212529;
+    color: white;
+    box-sizing: border-box;
+}
+
+.simple-form button {
+    align-self: center;
+    margin: 4px 0;
+}
+
+.form-panel-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px auto;
+}
+
+.form-panel-nav a {
+    padding: 8px 12px;
+    color: white;
+    background-color: #181818;
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.form-panel-nav a:hover {
+    border-color: #00e676;
+    color: #00e676;
+}
+
+.form-panel-nav a:focus-visible {
+    outline: 2px solid #00e676;
+    outline-offset: 2px;
+}
+
+.form-panel {
+    display: none;
+    scroll-margin-top: 16px;
+}
+
+.form-panel.active-panel {
+    display: block;
+}
+
+.form-panel-nav a[aria-current="page"] {
+    border-color: #00e676;
+    color: #00e676;
+}
+
+button {
+    margin: 8px 6px 8px 0;
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #00e676;
+    color: #111;
+    font-weight: bold;
+}
+
+button:disabled { background-color: #555; color: #ddd; }
+
+/*
+Old stakeholder chooser styles kept for reference.
+These are no longer used because the "Choose a stakeholder" page is not being used.
+.role-directory { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.role-link { padding: 18px; border: 1px solid #555; color: white; text-decoration: none; }
+.role-link h2 { margin-top: 12px; }
+.role-link p { color: #ddd; }
+.role-number, .role-cta { color: #00e676; }
+.customer-role .role-number, .customer-role .role-cta { color: #7fd3dd; }
+.shareholder-role .role-number, .shareholder-role .role-cta { color: #f2c16b; }
+.notice { padding: 12px; border-left: 3px solid #f2c16b; background-color: #302c22; }
+*/
+
+.orders-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #181818;
+    font-size: 0.9rem;
+    margin-left: 150px;
+    margin-right: 50px;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+.orders-table th { background-color: #343a40; }
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.25rem; }
+    /* Old stakeholder chooser mobile rule kept for reference:
+    .role-directory { grid-template-columns: 1fr; }
+    */
+    .orders-table { font-size: 0.72rem; }
+    .orders-table th,
+    .orders-table td { padding: 6px 4px; }
+    .orders-table button { padding: 7px 5px; font-size: 0.7rem; }
+}

@@ -1,0 +1,301 @@
+body {
+    background-color: #212529;
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Page Title */
+h1 {
+    font-size: 2.5rem;
+    font-family: "Press Start 2P", cursive;
+    color: #9d4edd;
+
+    background-color: #000000;
+
+    text-align: center;
+
+    padding: 20px 40px;
+
+    display: table;
+
+    margin: 30px auto 0 auto;
+
+    border-radius: 10px;
+}
+
+.list-heading {
+    font-family: Consolas;
+    color: #9d4edd;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Quick Navigation */
+.quicknav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quicknav a {
+    font-family: Consolas;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    background-color: #181818;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #343a40;
+    transition: 0.3s ease;
+}
+
+.quicknav a:hover {
+    border-color: #9d4edd;
+    color: #9d4edd;
+}
+
+/* Edit box - hidden until "Edit" is clicked */
+.edit-box {
+    display: none;
+
+    width: 50%;
+
+    margin: 30px auto 0 auto;
+
+    background-color: #181818;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 20px rgba(157, 78, 221, 0.35);
+}
+
+.edit-box.visible {
+    display: block;
+}
+
+.edit-box h2 {
+    font-family: Consolas;
+    color: #9d4edd;
+    text-align: center;
+    margin-top: 0;
+}
+
+.edit-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-box label {
+    font-family: Consolas;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.edit-box input,
+.edit-box select,
+.edit-box textarea {
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #343a40;
+    border-radius: 8px;
+    background-color: #212529;
+    color: white;
+    font-family: Consolas;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.edit-box textarea {
+    resize: vertical;
+}
+
+.edit-box input:focus,
+.edit-box select:focus,
+.edit-box textarea:focus {
+    outline: none;
+    border-color: #9d4edd;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+}
+
+.edit-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-buttons input[type="submit"] {
+    flex: 1;
+    background-color: #9d4edd;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.edit-buttons input[type="submit"]:hover {
+    background-color: #7b2cbf;
+}
+
+.edit-buttons button {
+    flex: 1;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.edit-buttons button:hover {
+    background-color: #495057;
+}
+
+/* Product grid */
+.product-grid {
+    width: 90%;
+    margin: 20px auto 60px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.empty-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: Consolas;
+    font-size: 18px;
+}
+
+.empty-msg a {
+    color: #9d4edd;
+}
+
+/* Product Card */
+.product-card {
+    padding: 20px;
+
+    background-color: #181818;
+
+    border: 2px solid #343a40;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #9d4edd;
+
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
+}
+
+.product-card img {
+    width: 100%;
+
+    max-width: 220px;
+
+    height: 160px;
+
+    object-fit: contain;
+
+    background: transparent;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    color: #9d4edd;
+
+    font-family: Consolas;
+
+    margin-top: 15px;
+}
+
+.product-card p {
+    font-family: Consolas;
+
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-buttons button {
+    flex: 1;
+
+    background-color: #9d4edd;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.card-buttons button:hover {
+    background-color: #7b2cbf;
+}
+
+.card-buttons .delete-btn {
+    background-color: #e5383b;
+}
+
+.card-buttons .delete-btn:hover {
+    background-color: #ba181b;
+}
+
+/* Back Button */
+.back-btn {
+    display: block;
+
+    width: fit-content;
+
+    margin-left: 20px;
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    background-color: #0d3b8e;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-family: Consolas;
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #082c6a;
+
+    transform: translateY(-2px);
+}
